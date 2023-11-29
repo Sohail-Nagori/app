@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<meta charset='utf-8'>
+<title>Reminder Application</title>
+<script>
+function cancelSetReminder()
+{
+var cc=document.getElementById('cancelForm');
+cc.submit();
+return true;
+}
+</script>
+</head>
+<body style='font-family:Arial;font-size:25px'>
+<h2>Set a new Reminder</h2>
+<form action='/remapp/setReminderForUser'>
+Select a Date :
+<input type='date' id='date' name='date'><br><br>
+Subject : 
+<select>
+<option selected value='C'>C</option>
+<option value='C++'>C++</option>
+<option value='Java'>Java</option>
+<option value='HTML'>HTML</option>
+<option value='CSS'>CSS</option>
+<option value='Javascript'>Javascript</option>
+</select><br><br>
+Add Description : 
+<textarea id='subjectDescription' name='subjectDescription'>
+</textarea><br><br>
+Email Address : 
+<input type='email' id='mail' name='mail'><br><br>
+Contact Number : 
+<input type='text' id='contactNumber' name='contactNumber'><br><br>
+SMS No : 
+<input type='text' id='smsNumber' name='smsNumber'><br><br>
+Recur for next : 
+7Days<input type='radio' name='recur' id='sevenDays' value='7'>&nbsp;&nbsp;
+5Days<input type='radio' name='recur' id='fiveDays' value='5'>&nbsp;&nbsp;
+3Days<input type='radio' name='recur' id='ThreeDays' value='3'>&nbsp;&nbsp;
+2Days<input type='radio' name='recur' id='TwoDays' value='2'><br><br>
+<button type='submit' style='background-color:#6CB4EE;color:white;font-size:20px;border:none;padding:8px;border-radius:2px'>Confirm</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type='button' style='background-color:#6CB4EE;color:white;font-size:20px;border:none;padding:8px;border-radius:2px' value='Back' onclick='cancelSetReminder()'>
+</form>
+<form action='/remapp/homepage.html' id='cancelForm'>
+</form>
+</body>
+</HTML>

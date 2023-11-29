@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<meta charset='utf-8'>
+<title>Reminder Application</title>
+<script>
+function cancelLogin()
+{
+var cc=document.getElementById('cancelForm');
+cc.submit();
+return true;
+}
+</script>
+</head>
+<body style='font-size:25px;margin-top:100px'>
+<center>
+<form action='/remapp/getHomepage'>
+Username :
+<input type='text' id='username' name='username'  size='10' style='font-size:22px'><br><br>
+password : 
+<input type='password' id='password' name='password'  size='10' style='font-size:22px'><br><br>
+<button type='submit' style='background-color:#6CB4EE;color:white;font-size:20px;border:none;padding:8px;border-radius:2px'>Login</button>
+<input type='button' style='background-color:#6CB4EE;color:white;font-size:20px;border:none;padding:8px;border-radius:2px' value='Cancel' onclick='cancelLogin()'>
+</form>
+<form action='/remapp/cancelLogin.html' id='cancelForm'>
+</form>
+</center>
+</body>
+</HTML>
